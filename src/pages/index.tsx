@@ -5,14 +5,15 @@ import Billboard from "../components/Billboard";
 import Timer from "react-compound-timer/build";
 import moment from "moment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagramSquare, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram, faFacebookF , faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const data = {
   name: 'Company',
   phone: '555-555-5555',
   email: 'contact@example.com',
   launchDate: '4/1/2021',
-  icons: [['Instagram', faInstagramSquare], ['Facebook', faFacebookSquare], ['Twitter', faTwitterSquare]],
+  icons: [['Instagram', faInstagram], ['Facebook', faFacebookF], ['Twitter', faTwitter]],
   message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur'
 }
 
@@ -61,16 +62,7 @@ const IndexPage = () => {
           </div>
           <div className="row d-flex justify-content-evenly" >
             <div className="col-5">
-            <ul className="nav">
-                {data.icons.map(([name, icon]) => (
-                  <li className="nav-item text-center">
-                    <a className="nav-link" href="#" style={{}}>
-                      <FontAwesomeIcon icon={icon} size="2x" />
-                      {/* <p>{name}</p> */}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            
             </div>
             <div className="col-4">
               
@@ -113,6 +105,21 @@ const IndexPage = () => {
                   aria-describedby="button-addon2" />
                 <button className="btn btn-primary" type="button" id="button-addon2">Notify Me</button>
               </div>  
+              <p><small>Connect with us</small></p>
+              <hr  style={{width: "40%"}}/>
+            <ul className="nav">
+                {data.icons.map(([name, icon]) => (
+                  <li className="nav-item text-center">
+                    <a className="nav-link" href="#">
+                    <span className="fa-layers fa-fw fa-3x text-center">
+                      <FontAwesomeIcon icon={faCircle}   />
+                      <FontAwesomeIcon icon={icon}  inverse color="white" transform="shrink-8" />
+                    </span>
+                      {/* <p>{name}</p> */}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
           <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>

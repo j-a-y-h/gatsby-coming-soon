@@ -30,7 +30,7 @@ export default function Billboard({
         bottom: 0,
         left: 0,
         position: 'absolute',
-        backgroundColor: 'rgba(0,0,0,0.25)'
+        backgroundColor: 'rgba(0,0,0,0.5)'
       }}></div>
       <div
         className="container-fluid"
