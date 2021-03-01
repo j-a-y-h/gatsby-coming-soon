@@ -7,7 +7,7 @@ const data = {
   name: 'Company',
   phone: '555-555-5555',
   email: 'contact@example.com',
-  message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur'
+  message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur'
 }
 
 // markup
@@ -15,24 +15,38 @@ const IndexPage = () => {
   return (
     <>
     <Helmet>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+      {/* TODO: make this load initially with Gatsby without JS */}
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@800" />
     </Helmet>
-    <main>
-      <nav className="navbar navbar-dark bg-dark fixed-top">
+    <main style={{fontFamily: 'Poppins'}}>
+      <nav className="">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img src="https://beta.sourware.com/img/sourware_o.png" alt="Logo" height="24" className="d-inline-block align-top" />
-            <span>&nbsp;{data.name}</span>
-          </a>
-          <div className="navbar-text">
-            <span>{data.phone}</span> | <span>{data.email}</span>
-          </div>
+          
         </div>
       </nav>
-      <Billboard image="/img/laptop-1920.jpg" title="We are coming soon!">
+      <Billboard image="/img/laptop-1920.jpg" title="">
         <>
-          <div className="row">
-            <div className="col-6">
+          <div className="row d-flex justify-content-evenly">
+            <div className="col-5">
+              <a className="navbar-brand" href="#">
+                <img src="https://beta.sourware.com/img/sourware_o.png" alt="Logo" height="24" className="d-inline-block align-top" />
+                <span>&nbsp;{data.name}</span>
+              </a>
+            </div>
+            <div className="col-4 text-end">
+            <span>{data.phone}</span> | <span>{data.email}</span>
+            </div>
+          </div>
+          <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>
+            <div className="col-5">
+              <h1 
+                style={{ color: "white", fontSize: "5rem", textTransform: "capitalize", fontWeight: 'bold'}}
+              >We are coming soon!</h1>
+            </div>
+            <div className="col-4"></div>
+          </div>
+          <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>
+            <div className="col-5">
               <div className="row text-center">
                 <div className="col-md">
                   <p>Days</p>
@@ -40,19 +54,19 @@ const IndexPage = () => {
                 </div>
                 <div className="col-md">
                   <p>Hours</p>
-                  <p>63</p>
+                  <p style={{fontSize: '4rem'}}>63</p>
                 </div>
                 <div className="col-md">
                   <p>Minutes</p>
-                  <p>63</p>
+                  <p style={{fontSize: '4rem'}}>63</p>
                 </div>
                 <div className="col-md">
                   <p>Seconds</p>
-                  <p>63</p>
+                  <p style={{fontSize: '4rem'}}>63</p>
                 </div>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-4">
               <p>{data.message}</p>
               <div className="input-group mb-3">
                 <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />

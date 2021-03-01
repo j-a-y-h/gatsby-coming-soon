@@ -40,11 +40,13 @@ export default function Billboard({
           color: "white",
           right: 0,
           left: 0,
-          padding: "60px",
+          padding: "20px",
           zIndex: 1,
         }}
       >
-        <h1 style={{ color: "white" }}>{title}</h1>
+        <div className="row">
+          <h1 className="col-6" style={{ color: "white", fontSize: "6rem" }}>{title}</h1>
+        </div>
         {children}
       </div>
     </div>
