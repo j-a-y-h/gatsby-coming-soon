@@ -2,6 +2,7 @@ import * as React from "react"
 import Helmet from 'react-helmet'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Billboard from "../components/Billboard";
+import Timer from "react-compound-timer/build";
 
 const data = {
   name: 'Company',
@@ -55,22 +56,27 @@ const IndexPage = () => {
           <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>
             <div className="col-5">
               <div className="row text-center">
-                <div className="col-md" style={counterBoxStyle}>
-                  <p>Days</p>
-                  <p style={{fontSize: '4rem'}}><strong>63</strong></p>
-                </div>
-                <div className="col-md" style={counterBoxStyle}>
-                  <p>Hours</p>
-                  <p style={{fontSize: '4rem'}}><strong>63</strong></p>
-                </div>
-                <div className="col-md" style={counterBoxStyle}>
-                  <p>Minutes</p>
-                  <p style={{fontSize: '4rem'}}><strong>63</strong></p>
-                </div>
-                <div className="col-md" style={counterBoxStyle}>
-                  <p>Seconds</p>
-                  <p style={{fontSize: '4rem'}}><strong>63</strong></p>
-                </div>
+                <Timer
+                  initialTime={55000}
+                  direction="backward"
+                >
+                  <div className="col-md" style={counterBoxStyle}>
+                    <p>Days</p>
+                    <p style={{fontSize: '4rem'}}><strong><Timer.Days /></strong></p>
+                  </div>
+                  <div className="col-md" style={counterBoxStyle}>
+                    <p>Hours</p>
+                    <p style={{fontSize: '4rem'}}><strong><Timer.Hours /></strong></p>
+                  </div>
+                  <div className="col-md" style={counterBoxStyle}>
+                    <p>Minutes</p>
+                    <p style={{fontSize: '4rem'}}><strong><Timer.Minutes /></strong></p>
+                  </div>
+                  <div className="col-md" style={counterBoxStyle}>
+                    <p>Seconds</p>
+                    <p style={{fontSize: '4rem'}}><strong><Timer.Seconds /></strong></p>
+                  </div>
+                </Timer>
               </div>
             </div>
             <div className="col-4">
