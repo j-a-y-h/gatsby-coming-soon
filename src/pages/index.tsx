@@ -4,12 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Billboard from "../components/Billboard";
 import Timer from "react-compound-timer/build";
 import moment from "moment";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagramSquare, faFacebookSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 
 const data = {
   name: 'Company',
   phone: '555-555-5555',
   email: 'contact@example.com',
   launchDate: '4/1/2021',
+  icons: [['Instagram', faInstagramSquare], ['Facebook', faFacebookSquare], ['Twitter', faTwitterSquare]],
   message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur'
 }
 
@@ -56,7 +59,24 @@ const IndexPage = () => {
             </div>
             <div className="col-4"></div>
           </div>
-          <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>
+          <div className="row d-flex justify-content-evenly" >
+            <div className="col-5">
+            <ul className="nav">
+                {data.icons.map(([name, icon]) => (
+                  <li className="nav-item text-center">
+                    <a className="nav-link" href="#" style={{}}>
+                      <FontAwesomeIcon icon={icon} size="2x" />
+                      {/* <p>{name}</p> */}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="col-4">
+              
+            </div>
+          </div>
+          <div className="row d-flex justify-content-evenly" style={{marginTop: '2rem'}}>
             <div className="col-5">
               <div className="row text-center">
                 <Timer

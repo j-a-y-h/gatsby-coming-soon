@@ -15,7 +15,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@popperjs/core": "^2.8.6",
+    "add": "^2.0.6",
     "babel-plugin-styled-components": "^1.12.0",
     "bootstrap": "^5.0.0-beta2",
     "gatsby": "^2.32.8",
@@ -34,6 +40,7 @@
     "react-compound-timer": "^1.2.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "yarn": "^1.22.10"
   }
 }
