@@ -48,10 +48,10 @@ const IndexPage = () => {
             <span>{data.phone}</span> | <span>{data.email}</span>
             </div>
           </div>
-          <div className="row d-flex justify-content-evenly" style={{marginTop: '10rem'}}>
+          <div className="row d-flex justify-content-evenly" style={{marginTop: '8rem'}}>
             <div className="col-5">
               <h1 
-                style={{ color: "white", fontSize: "5rem", textTransform: "capitalize", fontWeight: 'bold'}}
+                style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 'bold'}}
               >We are coming soon!</h1>
             </div>
             <div className="col-4"></div>
