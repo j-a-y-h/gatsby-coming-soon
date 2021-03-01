@@ -27,7 +27,7 @@ const IndexPage = () => {
     <Helmet>
       {/* TODO: make this load initially with Gatsby without JS */}
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;800&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     </Helmet>
     <main style={{fontFamily: 'Poppins'}}>
       <nav className="">
@@ -51,7 +51,7 @@ const IndexPage = () => {
           <div className="row d-flex justify-content-evenly" style={{marginTop: '8rem'}}>
             <div className="col-5">
               <h1 
-                style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 'bold'}}
+                style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 700}}
               >We are coming soon!</h1>
             </div>
             <div className="col-4"></div>
@@ -93,6 +93,13 @@ const IndexPage = () => {
                   aria-describedby="button-addon2" />
                 <button className="btn btn-primary" type="button" id="button-addon2">Notify Me</button>
               </div>  
+            </div>
+          </div>
+          <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>
+            <div className="col-3 text-center" style={{backgroundColor: "rgba(0,0,0,0.25)", padding: '8px', borderRadius: "0"}}>
+              <p style={{marginBottom: 0}}>
+                <small>Website is being crafted by <a rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
+              </p>
             </div>
           </div>
         </>
