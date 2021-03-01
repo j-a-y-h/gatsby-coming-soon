@@ -3,11 +3,13 @@ import Helmet from 'react-helmet'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Billboard from "../components/Billboard";
 import Timer from "react-compound-timer/build";
+import moment from "moment";
 
 const data = {
   name: 'Company',
   phone: '555-555-5555',
   email: 'contact@example.com',
+  launchDate: '4/1/2021',
   message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur'
 }
 
@@ -19,6 +21,7 @@ const counterBoxStyle = {
 
 // markup
 const IndexPage = () => {
+  const timeLeft = -moment().diff(data.launchDate)
   return (
     <>
     <Helmet>
@@ -57,7 +60,7 @@ const IndexPage = () => {
             <div className="col-5">
               <div className="row text-center">
                 <Timer
-                  initialTime={55000}
+                  initialTime={timeLeft}
                   direction="backward"
                 >
                   <div className="col-md" style={counterBoxStyle}>
