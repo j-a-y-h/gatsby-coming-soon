@@ -40,7 +40,7 @@ export default function Billboard({
           color: "white",
           right: 0,
           left: 0,
-          padding: "20px",
+          paddingTop: "2.5rem",
           zIndex: 1,
         }}
       >

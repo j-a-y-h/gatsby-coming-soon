@@ -37,7 +37,7 @@ const IndexPage = () => {
             <span>{data.phone}</span> | <span>{data.email}</span>
             </div>
           </div>
-          <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>
+          <div className="row d-flex justify-content-evenly" style={{marginTop: '10rem'}}>
             <div className="col-5">
               <h1 
                 style={{ color: "white", fontSize: "5rem", textTransform: "capitalize", fontWeight: 'bold'}}
@@ -69,8 +69,13 @@ const IndexPage = () => {
             <div className="col-4">
               <p>{data.message}</p>
               <div className="input-group mb-3">
-                <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                <button className="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                <input 
+                  type="email" 
+                  className="form-control" 
+                  placeholder="Email Address" 
+                  aria-label="Recipient's username" 
+                  aria-describedby="button-addon2" />
+                <button className="btn btn-primary" type="button" id="button-addon2">Notify Me</button>
               </div>  
             </div>
           </div>
