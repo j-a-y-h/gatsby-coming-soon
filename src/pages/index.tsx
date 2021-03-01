@@ -10,13 +10,20 @@ const data = {
   message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur'
 }
 
+const counterBoxStyle = {
+  backgroundColor: "rgba(255, 255, 255, 0.9)",
+  color: 'rgb(55,55,55)',
+  paddingTop: '20px'
+};
+
 // markup
 const IndexPage = () => {
   return (
     <>
     <Helmet>
       {/* TODO: make this load initially with Gatsby without JS */}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@800" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;800&display=swap" rel="stylesheet" />
     </Helmet>
     <main style={{fontFamily: 'Poppins'}}>
       <nav className="">
@@ -48,21 +55,21 @@ const IndexPage = () => {
           <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>
             <div className="col-5">
               <div className="row text-center">
-                <div className="col-md">
+                <div className="col-md" style={counterBoxStyle}>
                   <p>Days</p>
                   <p style={{fontSize: '4rem'}}><strong>63</strong></p>
                 </div>
-                <div className="col-md">
+                <div className="col-md" style={counterBoxStyle}>
                   <p>Hours</p>
-                  <p style={{fontSize: '4rem'}}>63</p>
+                  <p style={{fontSize: '4rem'}}><strong>63</strong></p>
                 </div>
-                <div className="col-md">
+                <div className="col-md" style={counterBoxStyle}>
                   <p>Minutes</p>
-                  <p style={{fontSize: '4rem'}}>63</p>
+                  <p style={{fontSize: '4rem'}}><strong>63</strong></p>
                 </div>
-                <div className="col-md">
+                <div className="col-md" style={counterBoxStyle}>
                   <p>Seconds</p>
-                  <p style={{fontSize: '4rem'}}>63</p>
+                  <p style={{fontSize: '4rem'}}><strong>63</strong></p>
                 </div>
               </div>
             </div>
