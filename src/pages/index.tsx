@@ -122,8 +122,21 @@ const IndexPage = () => {
               </ul>
             </div>
           </div>
-          <div className="row d-flex justify-content-evenly" style={{marginTop: '5rem'}}>
-            <div className="col-3 text-center" style={{backgroundColor: "rgba(0,0,0,0.25)", padding: '8px', borderRadius: "0"}}>
+
+          <div className="row d-flex justify-content-evenly"
+          style={{
+            position: "fixed",
+            bottom: 0,
+            color: "white",
+            right: 0,
+            left: 0,
+            paddingBottom: "30px",
+            paddingTop: "30px",
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6965161064425771) 50%, rgba(0,0,0,0) 100%)",
+          }}
+          >
+            <div className="col-3 text-center">
               <p style={{marginBottom: 0}}>
                 <small>Website is being crafted by <a rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
               </p>
