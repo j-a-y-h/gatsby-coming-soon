@@ -31,11 +31,6 @@ const IndexPage = () => {
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     </Helmet>
     <main style={{fontFamily: 'Poppins'}}>
-      <nav className="">
-        <div className="container-fluid">
-          
-        </div>
-      </nav>
       <Billboard image="/img/laptop-1920.jpg" title="">
         <>
           <div className="row d-flex justify-content-evenly">
@@ -56,14 +51,6 @@ const IndexPage = () => {
               >We are coming soon!</h1>
             </div>
             <div className="col-4"></div>
-          </div>
-          <div className="row d-flex justify-content-evenly" >
-            <div className="col-5">
-            
-            </div>
-            <div className="col-4">
-              
-            </div>
           </div>
           <div className="row d-flex justify-content-evenly" style={{marginTop: '2rem'}}>
             <div className="col-5">
@@ -128,7 +115,7 @@ const IndexPage = () => {
             <div className="row d-flex justify-content-evenly text-center">
               <div className="col-3 text-center">
                 <p style={{marginBottom: 0}}>
-                  <small>Website is being crafted by <a rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
+                  <small>Website is being crafted by <a target="_blank" rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
                 </p>
               </div>
             </div>
