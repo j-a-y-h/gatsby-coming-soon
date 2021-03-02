@@ -1,5 +1,4 @@
 import * as React from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faFacebookF , faTwitter } from '@fortawesome/free-brands-svg-icons'

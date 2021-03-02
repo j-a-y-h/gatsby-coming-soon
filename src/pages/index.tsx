@@ -2,7 +2,6 @@ import * as React from "react"
 import Helmet from 'react-helmet'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Billboard from "../components/Billboard";
-import moment from "moment";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Countdown from "../components/Countdown";
@@ -18,7 +17,6 @@ const data = {
 
 // markup
 const IndexPage = () => {
-  const timeLeft = -moment().diff(data.launchDate)
   return (
     <>
     <Helmet>
