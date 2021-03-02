@@ -7,6 +7,6 @@
   "background_color": "#ffffff",
   "email": "contact@example.com",
   "launchDate": "4/1/2021",
-  "icons": ["Instagram", "Facebook", "Twitter"],
+  "icons": [["Instagram", "sourware.llc"], ["Facebook", "sourware.llc"], ["Twitter", "sourware_llc"]],
   "message": "Our amazing website is currently under construction and we can't wait for you to experience it on <date>! Please enter your email below for launch notification and beta testing instructions."
 }
