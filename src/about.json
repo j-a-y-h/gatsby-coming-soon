@@ -1,6 +1,8 @@
 {
   "name": "Company",
   "phone": "(555) 555-5555",
+  "website": "https://sourware.com",
+  "domain": "sourware.com",
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "email": "contact@example.com",

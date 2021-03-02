@@ -12,7 +12,7 @@ import Head from "../components/Head";
 const IndexPage = () => {
   return (
     <>
-    <Head launchDate={data.launchDate} />
+    <Head launchDate={data.launchDate} domain={data.domain} url={data.website} />
     <main style={{fontFamily: 'Poppins'}}>
       <Billboard image="/img/laptop-1920.jpg" title="">
         <>
