@@ -1,33 +1,18 @@
 import * as React from "react"
-import Helmet from 'react-helmet'
 import Billboard from "../components/Billboard";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Countdown from "../components/Countdown";
 import { AnimatedText } from "../components/AnimatedText";
 import data from "../about.json"
-import moment from "moment";
 import Subscribe from "../components/Subscribe";
+import Head from "../components/Head";
 
 // markup
 const IndexPage = () => {
-  const formattedDate = moment(data.launchDate).format('dddd, MMMM Do, YYYY');
   return (
     <>
-    <Helmet>
-      <title>{data.name} | Coming Soon</title>
-      <meta name="description" 
-        content={`Coming soon website for ${data.name}. The website is scheduled to launch ${formattedDate}.`} />
-      <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
-        crossOrigin="anonymous" 
-      />
-      {/* TODO: make this load initially with Gatsby without JS */}
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-    </Helmet>
+    <Head launchDate={data.launchDate} />
     <main style={{fontFamily: 'Poppins'}}>
       <Billboard image="/img/laptop-1920.jpg" title="">
         <>
