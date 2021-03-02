@@ -1,7 +1,11 @@
 import * as React from "react"
-import SocialMediaIcons, { Props } from "../components/SocialMediaIcons";
+import SocialMediaIcons, { Props as SocialProps } from "../components/SocialMediaIcons";
 
-export default function Footer({icons}: Props) {
+type Props = {
+  companyName: string;
+}
+const fullYear = new Date().getFullYear();
+export default function Footer({icons, companyName}: Props & SocialProps) {
   return (
     <>
       <div 
@@ -24,9 +28,9 @@ export default function Footer({icons}: Props) {
         </div>
         <br />
         <div className="row d-flex justify-content-evenly text-center">
-          <div className="col-3 text-center">
+          <div className="col-4 text-center">
             <p style={{marginBottom: 0}}>
-              <small>Website is being crafted by <a target="_blank" rel="noopener nofollow" href="https://sourware.com">Sourware</a></small>
+              <small>© {fullYear} {companyName}&nbsp;/&nbsp;Website is being crafted by <a target="_blank" rel="noopener nofollow" href="https://sourware.com">Sourware</a></small>
             </p>
           </div>
         </div>

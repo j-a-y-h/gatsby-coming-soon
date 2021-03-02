@@ -55,7 +55,7 @@ const IndexPage = () => {
               </div>  
             </div>
           </div>
-          <Footer icons={data.icons} />
+          <Footer companyName={data.name} icons={data.icons} />
         </>
       </Billboard>
     </main>
