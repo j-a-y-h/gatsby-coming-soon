@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Countdown from "../components/Countdown";
 import { AnimatedText } from "../components/AnimatedText";
+import {TextField} from "@material-ui/core"
 import data from "../about.json"
 import moment from "moment";
 
@@ -49,12 +50,26 @@ const IndexPage = () => {
             <div className="col-xl-5 col-lg-6 col-md-11 col-sm-12">
               <p>{parsedMessage}</p>
               <div className="input-group mb-3">
-                <input 
-                  type="email" 
-                  className="form-control" 
-                  placeholder="Email Address" 
-                  aria-label="Recipient's username" 
-                  aria-describedby="button-addon2" />
+                <TextField
+                  error
+                  id="outlined-error"
+                  label="Enter email address"
+                  variant="filled"
+                  type="email"
+                  style={{
+                    position: "relative",
+                    flex: "1 1 auto",
+                    width: "1%",
+                    minWidth: 0,
+                    backgroundColor: "white",
+                    borderTopLeftRadius: "2px",
+                    borderBottomLeftRadius: "2px"
+                  }}
+                  inputProps={{
+                    "aria-label": "Enter email address",
+                    "aria-describedby": "button-addon2"
+                  }}
+                />
                 <button className="btn btn-primary" type="button" id="button-addon2">Notify Me</button>
               </div>  
             </div>
