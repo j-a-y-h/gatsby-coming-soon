@@ -7,13 +7,14 @@ import moment from "moment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faFacebookF , faTwitter } from '@fortawesome/free-brands-svg-icons'
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const data = {
   name: 'Company',
   phone: '555-555-5555',
   email: 'contact@example.com',
   launchDate: '4/1/2021',
-  icons: [['Instagram', faInstagram], ['Facebook', faFacebookF], ['Twitter', faTwitter]],
+  icons: ['Instagram', 'Facebook', 'Twitter'],
   message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur'
 }
 
@@ -123,24 +124,9 @@ const IndexPage = () => {
           >
             <div className="row d-flex justify-content-evenly text-center">
               <div className="col-3">
-            <p><small>Connect with us</small></p>
-              <hr  style={{width: "40%"}}/>
-            <ul className="nav">
-                {data.icons.map(([name, icon]) => (
-                  <li className="nav-item text-center">
-                    <a className="nav-link" href="#">
-                    <span className="fa-layers fa-fw fa-3x text-center">
-                      <FontAwesomeIcon icon={faCircle}   />
-                      <FontAwesomeIcon icon={icon}  inverse color="white" transform="shrink-8" />
-                    </span>
-                      {/* <p>{name}</p> */}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
+                <SocialMediaIcons icons={data.icons} />
               </div>
+            </div>
             <div className="row d-flex justify-content-evenly text-center">
             <div className="col-3 text-center">
               <p style={{marginBottom: 0}}>
@@ -148,7 +134,7 @@ const IndexPage = () => {
               </p>
             </div>
             </div>
-            </div>
+          </div>
         </>
       </Billboard>
     </main>
