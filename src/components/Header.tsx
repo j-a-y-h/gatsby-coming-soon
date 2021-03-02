@@ -1,5 +1,5 @@
 import * as React from "react"
-import {Button, Menu, MenuItem} from "@material-ui/core"
+import {Menu, MenuItem} from "@material-ui/core"
 
 type Props = Readonly<{
   email: string;
@@ -23,7 +23,7 @@ export default function Header({email, phone}: Props) {
     <>
       <div className="row d-flex justify-content-evenly">
         <div className="col-xl-5 col-lg-6 col-md-5 col-sm-5">
-          <div className="d-sm-flex bd-highlight mb-3">
+          <div className="d-xs-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <img 
                 src="https://sourware.com/img/green_white.png" 

@@ -30,7 +30,7 @@ const IndexPage = () => {
         <>
           <Header phone={data.phone} email={data.email} />
           <div className="row d-flex justify-content-evenly" style={{marginTop: '8rem'}}>
-            <div className="col-xl-5 col-lg-8 col-md-11 col-sm-12">
+            <div className="col-xl-5 col-lg-8 col-md-12 col-sm-12 text-lg-start text-center">
               <h1 
                 style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 700}}
               ><AnimatedText strings={["We're coming soon!"]} /></h1>
