@@ -106,6 +106,7 @@ const IndexPage = () => {
                   aria-describedby="button-addon2" />
                 <button className="btn btn-primary" type="button" id="button-addon2">Notify Me</button>
               </div>  
+              
             </div>
           </div>
 
@@ -127,12 +128,13 @@ const IndexPage = () => {
                 <SocialMediaIcons icons={data.icons} />
               </div>
             </div>
+            <br />
             <div className="row d-flex justify-content-evenly text-center">
-            <div className="col-3 text-center">
-              <p style={{marginBottom: 0}}>
-                <small>Website is being crafted by <a rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
-              </p>
-            </div>
+              <div className="col-3 text-center">
+                <p style={{marginBottom: 0}}>
+                  <small>Website is being crafted by <a rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
+                </p>
+              </div>
             </div>
           </div>
         </>
