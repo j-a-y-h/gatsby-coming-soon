@@ -14,7 +14,7 @@ const IndexPage = () => {
     <>
     <Head launchDate={data.launchDate} domain={data.domain} url={data.website} />
     <main style={{fontFamily: 'Poppins'}}>
-      <Billboard image="/img/laptop-1920.jpg" title="">
+      <Billboard image="/img/background.jpg" title="">
         <>
           <Header phone={data.phone} email={data.email} />
           <div className="row d-flex justify-content-evenly" style={{marginTop: '8rem'}}>
