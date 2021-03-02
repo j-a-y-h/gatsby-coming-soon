@@ -18,8 +18,8 @@ const data = {
 }
 
 const counterBoxStyle = {
-  backgroundColor: "rgba(255, 255, 255, 0.9)",
-  color: 'rgb(55,55,55)',
+  backgroundColor: "rgba(255, 255, 255, 0.0)",
+  color: 'rgb(255,255,255)',
   paddingTop: '20px'
 };
 
@@ -105,7 +105,25 @@ const IndexPage = () => {
                   aria-describedby="button-addon2" />
                 <button className="btn btn-primary" type="button" id="button-addon2">Notify Me</button>
               </div>  
-              <p><small>Connect with us</small></p>
+            </div>
+          </div>
+
+          <div 
+          style={{
+            position: "fixed",
+            bottom: 0,
+            color: "white",
+            right: 0,
+            left: 0,
+            paddingBottom: "30px",
+            paddingTop: "30px",
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6965161064425771) 50%, rgba(0,0,0,0) 100%)",
+          }}
+          >
+            <div className="row d-flex justify-content-evenly text-center">
+              <div className="col-3">
+            <p><small>Connect with us</small></p>
               <hr  style={{width: "40%"}}/>
             <ul className="nav">
                 {data.icons.map(([name, icon]) => (
@@ -121,27 +139,16 @@ const IndexPage = () => {
                 ))}
               </ul>
             </div>
-          </div>
 
-          <div className="row d-flex justify-content-evenly"
-          style={{
-            position: "fixed",
-            bottom: 0,
-            color: "white",
-            right: 0,
-            left: 0,
-            paddingBottom: "30px",
-            paddingTop: "30px",
-            background:
-              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6965161064425771) 50%, rgba(0,0,0,0) 100%)",
-          }}
-          >
+              </div>
+            <div className="row d-flex justify-content-evenly text-center">
             <div className="col-3 text-center">
               <p style={{marginBottom: 0}}>
                 <small>Website is being crafted by <a rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
               </p>
             </div>
-          </div>
+            </div>
+            </div>
         </>
       </Billboard>
     </main>
