@@ -3,6 +3,8 @@ const about = require("./src/about.json");
 module.exports = {
   siteMetadata: {
     title: `${about.name} | Coming Soon`,
+    siteUrl: `https://www.sourware.com`,
+    description: `Blazing fast modern site generator for React`,
   },
   plugins: [
     "gatsby-plugin-styled-components",

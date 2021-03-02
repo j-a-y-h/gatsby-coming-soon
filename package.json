@@ -13,7 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "build:prod": "yarn build && yarn package",
+    "build:prod": "yarn build && yarn build:optimized-css && yarn package",
+    "build:optimized-css": "node generate-critical-css.js",
     "package": "tar -czf public.tar.gz ./public"
   },
   "dependencies": {
@@ -46,5 +47,8 @@
     "styled-components": "^5.2.1",
     "typed.js": "^2.0.11",
     "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "critical": "^3.0.0"
   }
 }
