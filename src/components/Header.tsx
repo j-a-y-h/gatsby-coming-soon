@@ -1,5 +1,5 @@
 import * as React from "react"
-import {Menu, MenuItem} from "@material-ui/core"
+import {Menu, MenuItem, Tooltip} from "@material-ui/core"
 
 type Props = Readonly<{
   email: string;
@@ -41,10 +41,16 @@ export default function Header({email, phone}: Props) {
         </div>
         <div className="col-xl-5 col-lg-6 col-md-6 d-none d-sm-flex text-end d-flex justify-content-end align-items-center">
           <span>
-            <a href={`tel:${phone}`} style={style}>{phone}</a>
+            <Tooltip disableFocusListener disableTouchListener title="Click to call">
+              <a title="Click to call" href={`tel:${phone}`} style={style}>{phone}</a>
+            </Tooltip>
           </span> 
           &nbsp;/&nbsp;
-          <span><a href={`mailto:${email}`} style={style}>{email}</a></span>
+          <span>
+            <Tooltip disableFocusListener disableTouchListener title="Click to email">
+              <a title="Click to email" href={`mailto:${email}`} style={style}>{email}</a>
+            </Tooltip>
+          </span>
           <Menu
             id="simple-menu"
             anchorEl={anchorEl}
