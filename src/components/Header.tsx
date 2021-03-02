@@ -14,7 +14,7 @@ export default function Header({email, phone}: Props) {
   return (
     <>
       <div className="row d-flex justify-content-evenly">
-        <div className="col-5">
+        <div className="col-5 col-sm-5">
           <img 
             src="https://sourware.com/img/green_white.png" 
             alt="Logo" 
@@ -22,7 +22,7 @@ export default function Header({email, phone}: Props) {
             className="d-inline-block align-top" 
           />
         </div>
-        <div className="col-4 text-end">
+        <div className="col-4 col-sm-7 text-end">
           <span>
             <a href={`tel:${phone}`} style={style}>{phone}</a>
           </span> 

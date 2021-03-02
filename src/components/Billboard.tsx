@@ -22,6 +22,7 @@ export default function Billboard({
         background: `center / cover no-repeat url('${image}')`,
         height: `${setHeight || height || 360}px`,
         position: "relative",
+        boxSizing: "content-box",
       }}
     >
       <div style={{

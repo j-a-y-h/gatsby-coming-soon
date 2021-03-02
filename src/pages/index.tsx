@@ -30,7 +30,7 @@ const IndexPage = () => {
         <>
           <Header phone={data.phone} email={data.email} />
           <div className="row d-flex justify-content-evenly" style={{marginTop: '8rem'}}>
-            <div className="col-5">
+            <div className="col-md-5 col-sm-12">
               <h1 
                 style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 700}}
               ><AnimatedText strings={["We're coming soon!"]} /></h1>
@@ -38,12 +38,12 @@ const IndexPage = () => {
             <div className="col-4"></div>
           </div>
           <div className="row d-flex justify-content-evenly" style={{marginTop: '2rem'}}>
-            <div className="col-5">
+            <div className="col-md-5 d-none d-sm-block">
               <div className="row text-center">
                 <Countdown launchDate={data.launchDate} />
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-md-4 col-sm-12">
               <p>{data.message}</p>
               <div className="input-group mb-3">
                 <input 
