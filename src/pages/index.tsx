@@ -5,6 +5,7 @@ import Billboard from "../components/Billboard";
 import Timer from "react-compound-timer/build";
 import moment from "moment";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const data = {
   name: 'Company',
@@ -33,16 +34,7 @@ const IndexPage = () => {
     <main style={{fontFamily: 'Poppins'}}>
       <Billboard image="/img/laptop-1920.jpg" title="">
         <>
-          <div className="row d-flex justify-content-evenly">
-            <div className="col-5">
-              <a className="navbar-brand" href="#">
-                <img src="https://sourware.com/img/green_white.png" alt="Logo" height="24" className="d-inline-block align-top" />
-              </a>
-            </div>
-            <div className="col-4 text-end">
-            <span>{data.phone}</span> | <span>{data.email}</span>
-            </div>
-          </div>
+          <Header phone={data.phone} email={data.email} />
           <div className="row d-flex justify-content-evenly" style={{marginTop: '8rem'}}>
             <div className="col-5">
               <h1 
