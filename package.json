@@ -12,7 +12,9 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "build:prod": "yarn build && yarn package",
+    "package": "tar -czf public.tar.gz ./public"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
