@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Countdown from "../components/Countdown";
 import { AnimatedText } from "../components/AnimatedText";
-import data from "../about"
+import data from "../about.json"
 
 // markup
 const IndexPage = () => {

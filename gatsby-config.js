@@ -1,6 +1,8 @@
+const about = require("./src/about.json");
+
 module.exports = {
   siteMetadata: {
-    title: "Coming Soon",
+    title: `${about.name} | Coming Soon`,
   },
   plugins: [
     "gatsby-plugin-styled-components",
