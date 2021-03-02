@@ -35,7 +35,7 @@ const IndexPage = () => {
                 style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 700}}
               ><AnimatedText strings={["We're coming soon!"]} /></h1>
             </div>
-            <div className="col-4"></div>
+            <div className="col-4 col-xl-5"></div>
           </div>
           <div className="row d-flex justify-content-evenly" style={{marginTop: '2rem'}}>
             <div className="col-xl-5 col-lg-6 col-md-11 d-none d-sm-block">
