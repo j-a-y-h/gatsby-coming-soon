@@ -6,13 +6,18 @@ import Header from "../components/Header";
 import Countdown from "../components/Countdown";
 import { AnimatedText } from "../components/AnimatedText";
 import data from "../about.json"
+import moment from "moment";
 
 // markup
 const IndexPage = () => {
+  const formattedDate = moment(data.launchDate).format('dddd, MMMM Do, YYYY');
+  const parsedMessage = data.message.replace("<date>", moment(data.launchDate).format('dddd, MMMM Do'));
   return (
     <>
     <Helmet>
       <title>{data.name} | Coming Soon</title>
+      <meta name="description" 
+        content={`Coming soon website for ${data.name}. The website is scheduled to launch ${formattedDate}.`} />
       <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
         rel="stylesheet" 
@@ -42,7 +47,7 @@ const IndexPage = () => {
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 col-md-11 col-sm-12">
-              <p>{data.message}</p>
+              <p>{parsedMessage}</p>
               <div className="input-group mb-3">
                 <input 
                   type="email" 
