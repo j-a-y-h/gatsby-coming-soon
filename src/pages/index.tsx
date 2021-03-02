@@ -2,10 +2,10 @@ import * as React from "react"
 import Helmet from 'react-helmet'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Billboard from "../components/Billboard";
-import Timer from "react-compound-timer/build";
 import moment from "moment";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Countdown from "../components/Countdown";
 
 const data = {
   name: 'Company',
@@ -15,11 +15,6 @@ const data = {
   icons: ['Instagram', 'Facebook', 'Twitter'],
   message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiu sit amet consectetur'
 }
-
-const counterBoxStyle = {
-  backgroundColor: "rgba(255, 255, 255, 0.0)",
-  color: 'rgb(255,255,255)',
-};
 
 // markup
 const IndexPage = () => {
@@ -46,27 +41,7 @@ const IndexPage = () => {
           <div className="row d-flex justify-content-evenly" style={{marginTop: '2rem'}}>
             <div className="col-5">
               <div className="row text-center">
-                <Timer
-                  initialTime={timeLeft}
-                  direction="backward"
-                >
-                  <div className="col-md" style={counterBoxStyle}>
-                    <p>Days</p>
-                    <p style={{fontSize: '4rem'}}><strong><Timer.Days /></strong></p>
-                  </div>
-                  <div className="col-md" style={counterBoxStyle}>
-                    <p>Hours</p>
-                    <p style={{fontSize: '4rem'}}><strong><Timer.Hours /></strong></p>
-                  </div>
-                  <div className="col-md" style={counterBoxStyle}>
-                    <p>Minutes</p>
-                    <p style={{fontSize: '4rem'}}><strong><Timer.Minutes /></strong></p>
-                  </div>
-                  <div className="col-md" style={counterBoxStyle}>
-                    <p>Seconds</p>
-                    <p style={{fontSize: '4rem'}}><strong><Timer.Seconds /></strong></p>
-                  </div>
-                </Timer>
+                <Countdown launchDate={data.launchDate} />
               </div>
             </div>
             <div className="col-4">
