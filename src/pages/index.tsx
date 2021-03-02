@@ -5,14 +5,13 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Countdown from "../components/Countdown";
 import { AnimatedText } from "../components/AnimatedText";
-import {TextField} from "@material-ui/core"
 import data from "../about.json"
 import moment from "moment";
+import Subscribe from "../components/Subscribe";
 
 // markup
 const IndexPage = () => {
   const formattedDate = moment(data.launchDate).format('dddd, MMMM Do, YYYY');
-  const parsedMessage = data.message.replace("<date>", moment(data.launchDate).format('dddd, MMMM Do'));
   return (
     <>
     <Helmet>
@@ -48,31 +47,8 @@ const IndexPage = () => {
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 col-md-11 col-sm-12">
-              <p>{parsedMessage}</p>
-              <div className="input-group mb-3">
-                <TextField
-                  error
-                  id="outlined-error"
-                  label="Enter email address"
-                  variant="filled"
-                  type="email"
-                  style={{
-                    position: "relative",
-                    flex: "1 1 auto",
-                    width: "1%",
-                    minWidth: 0,
-                    backgroundColor: "white",
-                    borderTopLeftRadius: "2px",
-                    borderBottomLeftRadius: "2px"
-                  }}
-                  inputProps={{
-                    "aria-label": "Enter email address",
-                    "aria-describedby": "button-addon2"
-                  }}
-                />
-                <button className="btn btn-primary" type="button" id="button-addon2">Notify Me</button>
-              </div>  
-            </div>
+              <Subscribe launchDate={data.launchDate} />
+            </div>  
           </div>
           <Footer companyName={data.name} icons={data.icons} />
         </>
