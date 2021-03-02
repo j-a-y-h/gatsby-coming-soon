@@ -8,7 +8,7 @@ import Countdown from "../components/Countdown";
 
 const data = {
   name: 'Company',
-  phone: '555-555-5555',
+  phone: '(555) 555-5555',
   email: 'contact@example.com',
   launchDate: '4/1/2021',
   icons: ['Instagram', 'Facebook', 'Twitter'],

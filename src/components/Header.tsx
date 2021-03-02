@@ -26,7 +26,7 @@ export default function Header({email, phone}: Props) {
           <span>
             <a href={`tel:${phone}`} style={style}>{phone}</a>
           </span> 
-          &nbsp;|&nbsp;
+          &nbsp;/&nbsp;
           <span><a href={`mailto:${email}`} style={style}>{email}</a></span>
         </div>
       </div>
