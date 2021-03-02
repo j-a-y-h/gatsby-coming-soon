@@ -32,7 +32,7 @@ const IndexPage = () => {
             <div className="col-5">
               <h1 
                 style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 700}}
-              >We are coming soon!</h1>
+              >We're coming soon!</h1>
             </div>
             <div className="col-4"></div>
           </div>

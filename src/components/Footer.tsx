@@ -26,7 +26,7 @@ export default function Footer({icons}: Props) {
         <div className="row d-flex justify-content-evenly text-center">
           <div className="col-3 text-center">
             <p style={{marginBottom: 0}}>
-              <small>Website is being crafted by <a target="_blank" rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
+              <small>Website is being crafted by <a target="_blank" rel="noopener nofollow" href="https://sourware.com">Sourware</a></small>
             </p>
           </div>
         </div>
