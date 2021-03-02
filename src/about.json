@@ -1,6 +1,8 @@
 {
   "name": "Company",
   "phone": "(555) 555-5555",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
   "email": "contact@example.com",
   "launchDate": "4/1/2021",
   "icons": ["Instagram", "Facebook", "Twitter"],
