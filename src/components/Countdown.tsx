@@ -10,6 +10,10 @@ const counterBoxStyle = {
   color: 'rgb(255,255,255)',
 };
 
+const timeLabelStyle = {
+  color: "rgba(255,255,255,0.7)"
+}
+
 export default function Countdown({launchDate}: Props) {
   const timeLeft = -moment().diff(launchDate)
   return (
@@ -19,19 +23,19 @@ export default function Countdown({launchDate}: Props) {
         direction="backward"
       >
         <div className="col-md" style={counterBoxStyle}>
-          <p>Days</p>
+          <p style={timeLabelStyle}>Days</p>
           <p style={{fontSize: '4rem'}}><strong><Timer.Days /></strong></p>
         </div>
         <div className="col-md" style={counterBoxStyle}>
-          <p>Hours</p>
+          <p style={timeLabelStyle}>Hours</p>
           <p style={{fontSize: '4rem'}}><strong><Timer.Hours /></strong></p>
         </div>
         <div className="col-md" style={counterBoxStyle}>
-          <p>Minutes</p>
+          <p style={timeLabelStyle}>Minutes</p>
           <p style={{fontSize: '4rem'}}><strong><Timer.Minutes /></strong></p>
         </div>
         <div className="col-md" style={counterBoxStyle}>
-          <p>Seconds</p>
+          <p style={timeLabelStyle}>Seconds</p>
           <p style={{fontSize: '4rem'}}><strong><Timer.Seconds /></strong></p>
         </div>
       </Timer>
