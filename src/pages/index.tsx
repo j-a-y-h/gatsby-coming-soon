@@ -5,6 +5,7 @@ import Billboard from "../components/Billboard";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Countdown from "../components/Countdown";
+import { AnimatedText } from "../components/AnimatedText";
 
 const data = {
   name: 'Company',
@@ -32,7 +33,7 @@ const IndexPage = () => {
             <div className="col-5">
               <h1 
                 style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 700}}
-              >We're coming soon!</h1>
+              ><AnimatedText strings={["We're coming soon!"]} /></h1>
             </div>
             <div className="col-4"></div>
           </div>
