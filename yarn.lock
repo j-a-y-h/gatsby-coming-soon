@@ -12095,6 +12095,11 @@ react-transition-group@^4.4.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-uniformed@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/react-uniformed/-/react-uniformed-0.0.19.tgz#bfc0b2dbef4ba0f5e8e0d6c23b3cfd284248069a"
+  integrity sha512-/vIfB7Q2CPLRQjswfcJJFQSF2KIYxBVkgPcs05i6UwxGJ26jthFUdtMo3agZgJHmTQKXBEYPfUuaDZrJDryNUg==
+
 react@^16.13.1:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
