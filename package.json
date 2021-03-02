@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "build:prod": "yarn build && yarn build:optimized-css && yarn package",
+    "build:prod": "yarn clean && yarn build && yarn build:optimized-css && yarn package",
     "build:optimized-css": "node generate-critical-css.js",
     "package": "tar -czf public.tar.gz ./public"
   },
