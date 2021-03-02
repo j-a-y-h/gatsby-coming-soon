@@ -4,7 +4,7 @@ critical.generate({
     // Inline the generated critical-path CSS
     // - true generates HTML
     // - false generates CSS
-    inline: false,
+    inline: true,
 
     // Your base directory
     base: 'public/',
