@@ -31,14 +31,14 @@ export default function Head({launchDate, url, domain}: Props) {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${url}/img/sourware-cover.jpg`} />
+      <meta property="og:image" content={`${url}/img/opengraph-cover.jpg`} />
       {/* Twitter cards */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content={domain} />
       <meta property="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${url}/img/sourware-cover.jpg`} />
+      <meta name="twitter:image" content={`${url}/img/opengraph-cover.jpg`} />
     </Helmet>
   )
 }
