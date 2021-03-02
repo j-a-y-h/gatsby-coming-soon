@@ -10,7 +10,7 @@ const map = {
   "Twitter": faTwitter,
 }
 
-type Props = Readonly<{
+export type Props = Readonly<{
   icons: string[];
 }>
 

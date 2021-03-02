@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Billboard from "../components/Billboard";
 import Timer from "react-compound-timer/build";
 import moment from "moment";
-import SocialMediaIcons from "../components/SocialMediaIcons";
+import Footer from "../components/Footer";
 
 const data = {
   name: 'Company',
@@ -90,33 +90,7 @@ const IndexPage = () => {
               </div>  
             </div>
           </div>
-          <div 
-          style={{
-            position: "fixed",
-            bottom: 0,
-            color: "white",
-            right: 0,
-            left: 0,
-            paddingBottom: "30px",
-            paddingTop: "30px",
-            background:
-              "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6965161064425771) 50%, rgba(0,0,0,0) 100%)",
-          }}
-          >
-            <div className="row d-flex justify-content-evenly text-center">
-              <div className="col-3">
-                <SocialMediaIcons icons={data.icons} />
-              </div>
-            </div>
-            <br />
-            <div className="row d-flex justify-content-evenly text-center">
-              <div className="col-3 text-center">
-                <p style={{marginBottom: 0}}>
-                  <small>Website is being crafted by <a target="_blank" rel="noopener nofollow" href="https://sourware.com">Sourware, LLC</a></small>
-                </p>
-              </div>
-            </div>
-          </div>
+          <Footer icons={data.icons} />
         </>
       </Billboard>
     </main>
