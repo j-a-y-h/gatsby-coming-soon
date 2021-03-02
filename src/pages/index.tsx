@@ -4,9 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Billboard from "../components/Billboard";
 import Timer from "react-compound-timer/build";
 import moment from "moment";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
-import { faInstagram, faFacebookF , faTwitter } from '@fortawesome/free-brands-svg-icons'
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const data = {
@@ -21,7 +18,6 @@ const data = {
 const counterBoxStyle = {
   backgroundColor: "rgba(255, 255, 255, 0.0)",
   color: 'rgb(255,255,255)',
-  paddingTop: '20px'
 };
 
 // markup
