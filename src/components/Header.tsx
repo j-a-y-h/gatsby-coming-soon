@@ -22,7 +22,7 @@ export default function Header({email, phone}: Props) {
   return (
     <>
       <div className="row d-flex justify-content-evenly">
-        <div className="col-lg-5 col-md-5 col-sm-5">
+        <div className="col-lg-6 col-md-5 col-sm-5">
           <div className="d-sm-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <img 
@@ -39,7 +39,7 @@ export default function Header({email, phone}: Props) {
             </div>
           </div>
         </div>
-        <div className="col-lg-4 col-md-6 d-none d-sm-flex text-end d-flex justify-content-end align-items-center">
+        <div className="col-lg-6 col-md-6 d-none d-sm-flex text-end d-flex justify-content-end align-items-center">
           <span>
             <a href={`tel:${phone}`} style={style}>{phone}</a>
           </span> 
