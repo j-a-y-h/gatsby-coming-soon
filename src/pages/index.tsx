@@ -36,8 +36,7 @@ const IndexPage = () => {
           <div className="row d-flex justify-content-evenly">
             <div className="col-5">
               <a className="navbar-brand" href="#">
-                <img src="https://beta.sourware.com/img/sourware_o.png" alt="Logo" height="24" className="d-inline-block align-top" />
-                <span>&nbsp;{data.name}</span>
+                <img src="https://sourware.com/img/green_white.png" alt="Logo" height="24" className="d-inline-block align-top" />
               </a>
             </div>
             <div className="col-4 text-end">
@@ -89,10 +88,8 @@ const IndexPage = () => {
                   aria-describedby="button-addon2" />
                 <button className="btn btn-primary" type="button" id="button-addon2">Notify Me</button>
               </div>  
-              
             </div>
           </div>
-
           <div 
           style={{
             position: "fixed",
