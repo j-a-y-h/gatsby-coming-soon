@@ -26,7 +26,7 @@ export default function Header({email, phone}: Props) {
           <div className="d-xs-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <img 
-                src="https://sourware.com/img/green_white.png" 
+                src="https://beta.sourware.com/img/green_white.png" 
                 alt="Logo" 
                 height="34" 
                 className="d-inline-block align-top" 
