@@ -51,7 +51,6 @@ export default function Subscribe({launchDate}: Props) {
         body: JSON.stringify(values)
       });
       let state: "error" | "success" |  "server-error" = "success";
-      const json = await res.json();
       if (!res.ok) {
         if (res.status >= 400 && res.status < 500) {
           state = "error";
@@ -60,9 +59,10 @@ export default function Subscribe({launchDate}: Props) {
         }
         form.setError("email", "Error processing form");
       }
-      console.log(json);
       setShowSnack(true);
       dispatch(state);
+      const json = await res.json();
+      console.log(json);
     },
     constraints: {
       email: { type: 'email' }
