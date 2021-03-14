@@ -1,6 +1,6 @@
 import * as React from "react"
 import {Snackbar, TextField} from "@material-ui/core"
-import MuiAlert from '@material-ui/lab/Alert';
+import MuiAlert, { AlertProps, Color } from '@material-ui/lab/Alert';
 import data from "../about.json"
 import moment from "moment";
 import {useForm, useSettersAsEventHandler} from "react-uniformed"
@@ -9,13 +9,36 @@ type Props = Readonly<{
   launchDate: string;
 }>
 
-function Alert(props) {
+function Alert(props: AlertProps) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+function reducer(_, action: "error" | "success" |  "server-error") {
+  switch (action) {
+    case "error":
+      return {
+        severity: "error",
+        message: "Unable to process request. Please check email."
+      };
+    case "success":
+      return {
+        severity: "success",
+        message: "Your form has been received!"
+      };
+    case "server-error":
+      return {
+        severity: "error",
+        message: "Sorry, something went wrong."
+      };
+    default:
+      return {severity: "info", message: ""};
+  }
 }
 
 export default function Subscribe({launchDate}: Props) {
   const [showSnack, setShowSnack] = React.useState(false); 
   const parsedMessage = data.message.replace("<date>", moment(launchDate).format('dddd, MMMM Do'));
+  const [snackbarState, dispatch] = React.useReducer(reducer, {severity: "info", message: ""});
   const {hasErrors, isDirty, isSubmitting, values, validateByName, touchField, submit, setValue} = useForm({
     async onSubmit(values, form) {
       // TODO: move to config
@@ -26,16 +49,18 @@ export default function Subscribe({launchDate}: Props) {
         },
         body: JSON.stringify(values)
       });
+      let state: "error" | "success" |  "server-error" = "success";
       const json = await res.json();
       if (!res.ok) {
-        console.log(json);
-        setShowSnack(true);
         if (res.status >= 400 && res.status < 500) {
-          form.setError("email", "Unable to process request. Please check inputs.");
+          state = "error";
         } else {
-          form.setError("email", "Sorry, something went wrong.");
+          state = "server-error";
         }
       }
+      console.log(json);
+      setShowSnack(true);
+      dispatch(state);
     },
     constraints: {
       email: { type: 'email' }
@@ -45,9 +70,7 @@ export default function Subscribe({launchDate}: Props) {
   return (
     <>
       <Snackbar open={showSnack} autoHideDuration={6000} onClose={() => setShowSnack(false)}>
-        <Alert severity="success">
-          This is a success message!
-        </Alert>
+        <Alert severity={snackbarState.severity as Color}>{snackbarState.message}</Alert>
       </Snackbar>
       <p>{parsedMessage}</p>
       <div className="input-group mb-3">
