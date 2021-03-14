@@ -1,5 +1,6 @@
 import * as React from "react"
-import {TextField} from "@material-ui/core"
+import {Snackbar, TextField} from "@material-ui/core"
+import MuiAlert from '@material-ui/lab/Alert';
 import data from "../about.json"
 import moment from "moment";
 import {useForm, useSettersAsEventHandler} from "react-uniformed"
@@ -8,23 +9,33 @@ type Props = Readonly<{
   launchDate: string;
 }>
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 export default function Subscribe({launchDate}: Props) {
+  const [showSnack, setShowSnack] = React.useState(false); 
   const parsedMessage = data.message.replace("<date>", moment(launchDate).format('dddd, MMMM Do'));
   const {hasErrors, isDirty, isSubmitting, validateByName, touchField, submit, setValue} = useForm({
-    onSubmit(values, api) {
+    async onSubmit(values, form) {
       // TODO: move to config
-      fetch("http://localhost:3000/subscribe-launch-notification/", {
+      const res = await fetch("http://localhost:3000/subscribe-launch-notification/", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(values)
-      }).then(() => {
-        api.setFeedback
-      }, (e) => {
-        console.log(e);
-        api.setError("email", "Sorry, something went wrong.");
-      })
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        console.log(json);
+        setShowSnack(true);
+        if (res.status >= 400 && res.status < 500) {
+          form.setError("email", "Unable to process request. Please check inputs.");
+        } else {
+          form.setError("email", "Sorry, something went wrong.");
+        }
+      }
     },
     constraints: {
       email: { type: 'email' }
@@ -33,6 +44,11 @@ export default function Subscribe({launchDate}: Props) {
   const onChange = useSettersAsEventHandler(validateByName, touchField, setValue);
   return (
     <>
+      <Snackbar open={showSnack} autoHideDuration={6000} onClose={() => setShowSnack(false)}>
+        <Alert severity="success">
+          This is a success message!
+        </Alert>
+      </Snackbar>
       <p>{parsedMessage}</p>
       <div className="input-group mb-3">
         <TextField
