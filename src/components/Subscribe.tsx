@@ -13,6 +13,8 @@ function Alert(props: AlertProps) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
+const defaultSnackbarState = {severity: "info", message: ""};
+
 function reducer(_, action: "error" | "success" |  "server-error") {
   switch (action) {
     case "error":
@@ -31,14 +33,14 @@ function reducer(_, action: "error" | "success" |  "server-error") {
         message: "Sorry, something went wrong."
       };
     default:
-      return {severity: "info", message: ""};
+      return defaultSnackbarState;
   }
 }
 
 export default function Subscribe({launchDate}: Props) {
   const [showSnack, setShowSnack] = React.useState(false); 
   const parsedMessage = data.message.replace("<date>", moment(launchDate).format('dddd, MMMM Do'));
-  const [snackbarState, dispatch] = React.useReducer(reducer, {severity: "info", message: ""});
+  const [snackbarState, dispatch] = React.useReducer(reducer, defaultSnackbarState);
   const {hasErrors, isDirty, isSubmitting, values, validateByName, touchField, submit, setValue} = useForm({
     async onSubmit(values, form) {
       // TODO: move to config
@@ -57,6 +59,7 @@ export default function Subscribe({launchDate}: Props) {
         } else {
           state = "server-error";
         }
+        form.setError("email", "Error processing form");
       }
       console.log(json);
       setShowSnack(true);
