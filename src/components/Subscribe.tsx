@@ -43,8 +43,7 @@ export default function Subscribe({launchDate}: Props) {
   const [snackbarState, dispatch] = React.useReducer(reducer, defaultSnackbarState);
   const {hasErrors, isDirty, isSubmitting, values, validateByName, touchField, submit, setValue} = useForm({
     async onSubmit(values, form) {
-      // TODO: move to config
-      const res = await fetch("http://localhost:3000/subscribe-launch-notification/", {
+      const res = await fetch(data.subscribeUrl, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
