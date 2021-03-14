@@ -16,7 +16,7 @@ function Alert(props) {
 export default function Subscribe({launchDate}: Props) {
   const [showSnack, setShowSnack] = React.useState(false); 
   const parsedMessage = data.message.replace("<date>", moment(launchDate).format('dddd, MMMM Do'));
-  const {hasErrors, isDirty, isSubmitting, validateByName, touchField, submit, setValue} = useForm({
+  const {hasErrors, isDirty, isSubmitting, values, validateByName, touchField, submit, setValue} = useForm({
     async onSubmit(values, form) {
       // TODO: move to config
       const res = await fetch("http://localhost:3000/subscribe-launch-notification/", {
@@ -58,6 +58,7 @@ export default function Subscribe({launchDate}: Props) {
           type="email"
           name="email"
           onChange={onChange}
+          value={values.email}
           style={{
             position: "relative",
             flex: "1 1 auto",
