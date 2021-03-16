@@ -8,16 +8,27 @@ import data from "../about.json"
 import Subscribe from "../components/Subscribe";
 import Head from "../components/Head";
 
+function CustomStyles() {
+  return (<style>{`
+      @media (min-width: 576px) {
+      .mt-sm-5 {
+          margin-top: 8rem!important;
+      }
+    }
+`}</style>);
+}
+
 // markup
 const IndexPage = () => {
   return (
     <>
     <Head launchDate={data.launchDate} domain={data.domain} url={data.website} />
+    <CustomStyles />
     <main style={{fontFamily: 'Poppins'}}>
       <Billboard image="/img/background.jpg" title="">
         <>
           <Header phone={data.phone} email={data.email} />
-          <div className="row d-flex justify-content-evenly" style={{marginTop: '8rem'}}>
+          <div className="row d-flex justify-content-evenly mt-1 mt-sm-5">
             <div className="col-xl-5 col-lg-8 col-md-12 col-sm-12 text-lg-start text-center">
               <h1 
                 style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 700}}
