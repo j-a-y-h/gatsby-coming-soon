@@ -27,7 +27,7 @@ export default function Footer({icons, companyName}: Props & SocialProps) {
             <SocialMediaIcons icons={icons} />
           </div>
         </div>
-        <br />
+        <br className="d-none d-sm-block" />
         <div className="row d-flex justify-content-evenly text-center">
           <div className="col-md-12 text-center">
             <p style={{marginBottom: 0}}>
