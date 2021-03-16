@@ -34,14 +34,14 @@ export default function Billboard({
         backgroundColor: 'rgba(0,0,0,0.5)'
       }}></div>
       <div
-        className="container-fluid"
+        className="container-fluid pt-sm-4"
         style={{
           position: "absolute",
           top: 0,
           color: "white",
           right: 0,
           left: 0,
-          paddingTop: "2.5rem",
+          paddingTop: "0.5rem",
           zIndex: 1,
         }}
       >
