@@ -39,7 +39,7 @@ const IndexPage = () => {
             </div>
             <div className="col-4 col-xl-5"></div>
           </div>
-          <div className="row d-flex justify-content-evenly" style={{marginTop: '2rem'}}>
+          <div className="row d-flex justify-content-evenly mt-sm-3">
             <div className="col-xl-5 col-lg-6 col-md-11 d-none d-sm-block">
               <div className="row text-center">
                 <Countdown launchDate={data.launchDate} />
