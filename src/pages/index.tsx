@@ -14,6 +14,9 @@ function CustomStyles() {
       .mt-sm-5 {
           margin-top: 8rem!important;
       }
+      .fs-sm-5 {
+        font-size: 4rem !important;
+      }
     }
 `}</style>);
 }
@@ -30,8 +33,8 @@ const IndexPage = () => {
           <Header phone={data.phone} email={data.email} />
           <div className="row d-flex justify-content-evenly mt-1 mt-sm-5">
             <div className="col-xl-5 col-lg-8 col-md-12 col-sm-12 text-lg-start text-center">
-              <h1 
-                style={{ color: "white", fontSize: "4rem", textTransform: "capitalize", fontWeight: 700}}
+              <h1 className="fs-sm-5"
+                style={{ color: "white", fontSize: "2.5rem", textTransform: "capitalize", fontWeight: 700}}
               ><AnimatedText strings={["We're coming soon!"]} /></h1>
             </div>
             <div className="col-4 col-xl-5"></div>
