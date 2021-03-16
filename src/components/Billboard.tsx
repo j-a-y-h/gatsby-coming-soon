@@ -36,11 +36,9 @@ export default function Billboard({
       <div
         className="container-fluid pt-sm-4"
         style={{
-          position: "absolute",
-          top: 0,
+          position: "relative",
+          height: "100%",
           color: "white",
-          right: 0,
-          left: 0,
           paddingTop: "0.5rem",
           zIndex: 1,
         }}
