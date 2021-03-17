@@ -13,30 +13,44 @@ const counterBoxStyle = {
 const timeLabelStyle = {
   color: "rgba(255,255,255,0.7)"
 }
+const textStyle = {
+  fontSize: "2rem"
+};
+
+function CustomStyles() {
+  return (<style>{`
+      @media (min-width: 576px) {
+      .fs-sm-5 {
+        font-size: 4rem !important;
+      }
+    }
+`}</style>);
+}
 
 export default function Countdown({launchDate}: Props) {
   const timeLeft = -moment().diff(launchDate)
   return (
     <>
+      <CustomStyles />
       <Timer
         initialTime={timeLeft}
         direction="backward"
       >
-        <div className="col-md" style={counterBoxStyle}>
+        <div className="col" style={counterBoxStyle}>
           <p style={timeLabelStyle}>Days</p>
-          <p style={{fontSize: '4rem'}}><strong><Timer.Days /></strong></p>
+          <p className="fs-sm-5" style={textStyle}><strong><Timer.Days /></strong></p>
         </div>
-        <div className="col-md" style={counterBoxStyle}>
+        <div className="col" style={counterBoxStyle}>
           <p style={timeLabelStyle}>Hours</p>
-          <p style={{fontSize: '4rem'}}><strong><Timer.Hours /></strong></p>
+          <p className="fs-sm-5" style={textStyle}><strong><Timer.Hours /></strong></p>
         </div>
-        <div className="col-md" style={counterBoxStyle}>
+        <div className="col" style={counterBoxStyle}>
           <p style={timeLabelStyle}>Minutes</p>
-          <p style={{fontSize: '4rem'}}><strong><Timer.Minutes /></strong></p>
+          <p className="fs-sm-5" style={textStyle}><strong><Timer.Minutes /></strong></p>
         </div>
-        <div className="col-md" style={counterBoxStyle}>
+        <div className="col" style={counterBoxStyle}>
           <p style={timeLabelStyle}>Seconds</p>
-          <p style={{fontSize: '4rem'}}><strong><Timer.Seconds /></strong></p>
+          <p className="fs-sm-5" style={textStyle}><strong><Timer.Seconds /></strong></p>
         </div>
       </Timer>
     </>
