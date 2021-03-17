@@ -5,22 +5,32 @@ type Props = Readonly<{
   image: string;
   title: string;
   children: JSX.Element;
-  setHeight?: number;
+  defaultHeight?: number;
 }>;
 
 export default function Billboard({
   image,
   title,
   children,
-  setHeight = 0,
+  defaultHeight = 0,
 }: Props): JSX.Element {
-  const { height } = useWindowSize();
+  const ref = React.useRef<HTMLDivElement>();
+  const { height: windowHeight } = useWindowSize();
+  const [height, setHeight] = React.useState(windowHeight);
+  if (ref.current) {
+    setTimeout(() => {
+      const cHeight = Array.from(ref.current.children).reduce((c, e) => c + e.clientHeight, 0);
+      if (cHeight > windowHeight) {
+        setHeight(cHeight + 40);
+      }
+    })
+  }
   return (
     <div
       className="jumbotron"
       style={{
         background: `center / cover no-repeat url('${image}')`,
-        height: `${setHeight || height || 360}px`,
+        height: `${defaultHeight || height || 360}px`,
         position: "relative",
         boxSizing: "content-box",
       }}
@@ -35,6 +45,7 @@ export default function Billboard({
       }}></div>
       <div
         className="container-fluid pt-sm-4"
+        ref={ref}
         style={{
           position: "relative",
           height: "100%",
