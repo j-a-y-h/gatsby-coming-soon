@@ -74,7 +74,7 @@ export default function Subscribe({launchDate}: Props) {
       <Snackbar open={showSnack} autoHideDuration={6000} onClose={() => setShowSnack(false)}>
         <Alert severity={snackbarState.severity as Color}>{snackbarState.message}</Alert>
       </Snackbar>
-      <p>{parsedMessage}</p>
+      <p className="text-center text-sm-start">{parsedMessage}</p>
       <div className="input-group mb-3">
         <TextField
           error={hasErrors}
