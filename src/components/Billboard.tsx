@@ -5,32 +5,25 @@ type Props = Readonly<{
   image: string;
   title: string;
   children: JSX.Element;
-  defaultHeight?: number;
 }>;
 
-export default function Billboard({
-  image,
-  title,
-  children,
-  defaultHeight = 0,
-}: Props): JSX.Element {
+export default function Billboard({ image, title, children}: Props): JSX.Element {
   const ref = React.useRef<HTMLDivElement>();
   const { height: windowHeight } = useWindowSize();
   const [height, setHeight] = React.useState(windowHeight);
-  if (ref.current) {
+  React.useLayoutEffect(() => {
     setTimeout(() => {
-      const cHeight = Array.from(ref.current.children).reduce((c, e) => c + e.clientHeight, 0);
-      if (cHeight > windowHeight) {
-        setHeight(cHeight + 40);
-      }
-    })
-  }
+      const padding = 40;
+      const cHeight = Array.from(ref?.current?.children).reduce((c, e) => c + e.clientHeight, padding);
+      setHeight(cHeight > windowHeight ? cHeight : windowHeight);
+    }, 100);
+  }, [windowHeight]);
   return (
     <div
       className="jumbotron"
       style={{
         background: `center / cover no-repeat url('${image}')`,
-        height: `${defaultHeight || height || 360}px`,
+        height: `${height}px`,
         position: "relative",
         boxSizing: "content-box",
       }}
