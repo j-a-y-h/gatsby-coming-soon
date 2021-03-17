@@ -49,6 +49,9 @@ export default function Subscribe({launchDate}: Props) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(values)
+      }).catch(e => {
+        console.error(e);
+        return {ok: false, status: 500, json: () => {}};
       });
       let state: "error" | "success" |  "server-error" = "success";
       if (!res.ok) {
