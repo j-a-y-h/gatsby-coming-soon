@@ -23,8 +23,8 @@ export default function Header({email, phone}: Props) {
     <>
       <div className="row d-flex justify-content-evenly">
         <div className="col-xl-5 col-lg-6 col-md-5 col-sm-5">
-          <div className="d-xs-flex bd-highlight mb-3">
-            <div className="p-2 bd-highlight">
+          <div className="row d-xs-flex bd-highlight mb-3">
+            <div className="col p-2 bd-highlight">
               <img 
                 src="https://beta.sourware.com/img/green_white.png" 
                 alt="Logo" 
@@ -32,7 +32,7 @@ export default function Header({email, phone}: Props) {
                 className="d-inline-block align-top" 
               />
             </div>
-            <div className="ms-auto p-2 bd-highlight d-none d-sm-block d-xs-block d-md-none">
+            <div className="col-auto ms-auto p-2 bd-highlight d-inline-block d-sm-none">
               <button aria-controls="simple-menu" className="btn btn-primary" aria-haspopup="true" onClick={handleClick}>
                 Contact Us
               </button>
