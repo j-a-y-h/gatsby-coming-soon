@@ -23,7 +23,7 @@ export default function Header({email, phone}: Props) {
     <>
       <div className="row d-flex justify-content-evenly">
         <div className="col-sm-auto col">
-          <div className="row d-xs-flex bd-highlight mb-3">
+          <div className="row d-xs-flex bd-highlight mb-3 ps-4 pe-sm-0 pe-4">
             <div className="col p-2 bd-highlight">
               <img 
                 src="https://beta.sourware.com/img/green_white.png" 
@@ -39,7 +39,7 @@ export default function Header({email, phone}: Props) {
             </div>
           </div>
         </div>
-        <div className="col d-none d-sm-flex text-end d-flex justify-content-end align-items-center">
+        <div className="col d-none d-sm-flex text-end d-flex justify-content-end align-items-center pe-4">
           <span>
             <Tooltip disableFocusListener disableTouchListener title="Click to call">
               <a title="Click to call" href={`tel:${phone}`} style={style}>{phone}</a>
