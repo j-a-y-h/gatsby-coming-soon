@@ -2,3 +2,4 @@ node_modules/
 .cache/
 public
 *.tar.gz
+.DS_Store
