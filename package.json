@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "bootstrap": "echo 'removing origin from git' && git remote rm origin && yarn",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
