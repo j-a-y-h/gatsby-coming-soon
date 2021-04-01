@@ -8,6 +8,7 @@
   "email": "contact@example.com",
   "launchDate": "4/1/2021",
   "subscribeUrl": "http://localhost:3000/subscribe-launch-notification/",
-  "icons": [["Instagram", "sourware.llc"], ["Facebook", "sourware.llc"], ["Twitter", "sourware_llc"]],
+  "icons": [["Instagram", "instagram"], ["Facebook", "facebook"], ["Twitter", "twitter"]],
+  "headerMessage": "We're coming soon!",
   "message": "Our amazing website is currently under construction and we can't wait for you to experience it on <date>! Please enter your email below for launch notification and beta testing instructions."
 }

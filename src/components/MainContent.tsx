@@ -13,7 +13,7 @@ export default function MainContent() {
           <div className="col-xl-5 col-lg-8 col-md-12 col-sm-12 text-lg-start text-center">
             <h1 className="fs-sm-5"
               style={{ color: "white", fontSize: "2.5rem", textTransform: "capitalize", fontWeight: 700}}
-            ><AnimatedText strings={["We're coming soon!"]} /></h1>
+            ><AnimatedText strings={[data.headerMessage]} /></h1>
           </div>
           <div className="col-4 col-xl-5"></div>
         </div>
