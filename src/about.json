@@ -5,6 +5,7 @@
   "domain": "sourware.com",
   "theme_color": "#000000",
   "background_color": "#ffffff",
+  "primaryColor": "#0d6efd",
   "email": "contact@example.com",
   "launchDate": "4/1/2021",
   "subscribeUrl": "http://localhost:3000/subscribe-launch-notification/",
