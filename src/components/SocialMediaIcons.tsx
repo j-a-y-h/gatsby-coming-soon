@@ -25,7 +25,7 @@ export default function SocialMediaIcons ({icons}: Props) {
     <>
       <ul className="nav justify-content-center">
         {icons.map(([name, username]) => (
-          <li className="nav-item text-center">
+          <li key={name} className="nav-item text-center">
             <a className="nav-link" rel="noopener nofollow" target="_blank" href={`${urlMap[name]}/${username}`}>
               <span className="fa-layers fa-fw fa-3x text-center">
                 <FontAwesomeIcon icon={faCircle} color={about.primaryColor} />

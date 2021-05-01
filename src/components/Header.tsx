@@ -42,13 +42,13 @@ export default function Header({email, phone}: Props) {
         <div className="col d-none d-sm-flex text-end d-flex justify-content-end align-items-center pe-4">
           <span>
             <Tooltip disableFocusListener disableTouchListener title="Click to call">
-              <a title="Click to call" href={`tel:${phone}`} style={style}>{phone}</a>
+              <a href={`tel:${phone}`} style={style}>{phone}</a>
             </Tooltip>
           </span> 
           &nbsp;/&nbsp;
           <span>
             <Tooltip disableFocusListener disableTouchListener title="Click to email">
-              <a title="Click to email" href={`mailto:${email}`} style={style}>{email}</a>
+              <a href={`mailto:${email}`} style={style}>{email}</a>
             </Tooltip>
           </span>
           <Menu
