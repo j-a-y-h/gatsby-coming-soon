@@ -22,8 +22,8 @@ export function AnimatedText({strings}: Props) {
         });
       });
     }
-    const { typed } = ref.current;
     return (): void => {
+      const { typed } = ref.current;
       // eslint-disable-next-line
       typed?.destroy();
     };
