@@ -28,7 +28,7 @@ function CustomStyles() {
 }
 
 export default function Countdown({launchDate}: Props) {
-  const timeLeft = -moment().diff(launchDate)
+  const timeLeft = -moment().diff(launchDate);
   return (
     <>
       <CustomStyles />
